@@ -172,18 +172,6 @@ context.isTablet;   // true if width between 600 and 800
 context.isDesktop;  // true if width > 1024
 ```
 
-#### 📏 Platform Checks
-
-```dart
-context.isWeb;      // true if running on web
-context.isAndroid;  // true if Android and not web
-context.isIOS;      // true if iOS and not web
-context.isWindows;  // true if Windows and not web
-context.isLinux;    // true if Linux and not web
-context.isMacOS;    // true if macOS and not web
-
-```
-
 #### 📏 Orientation Checks
 
 ```dart
@@ -226,6 +214,36 @@ final points = [
 ];
 
 final path = Path().addSmoothCurve(points);
+```
+
+### Platforms
+
+- Detects the platform safely using conditional imports.
+- Supports:
+  - ✔️ Android
+  - ✔️ iOS
+  - ✔️ Web
+  - ✔️ Windows
+  - ✔️ macOS
+  - ✔️ Linux
+- Avoids using `dart:io` on Web or unsupported platforms like WASM.
+
+---
+
+#### Usage
+
+```dart
+import 'package:ingine/platform.dart';
+
+if (isWeb) {
+  print("Running on Web");
+} else if (isAndroid) {
+  print("Running on Android");
+} else if (isIOS) {
+  print("Running on iOS");
+} else if (isWindows) {
+  print("Running on Windows");
+}
 ```
 
 ### 🖌️ ICanvas & IPainter
