@@ -1,4 +1,4 @@
-part of '../../engine.dart';
+part of '../../../engine.dart';
 
 extension ColorUtils on Color {
   Color brightness(double amount) {

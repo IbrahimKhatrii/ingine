@@ -18,12 +18,12 @@ export 'platform.dart';
 
 export 'iEngine/prefs.dart'; // Export Prefs for global access
 
-part 'iEngine/extensions.dart';
+part 'src/iEngine/extensions.dart';
 
 // Flutter extensions
-part 'iEngine/extensions/build_context.dart';
-part 'iEngine/extensions/color.dart';
-part 'iEngine/extensions/path.dart';
+part 'src/iEngine/extensions/build_context.dart';
+part 'src/iEngine/extensions/color.dart';
+part 'src/iEngine/extensions/path.dart';
 
 // Utils
 part 'iEngine/canvas/canvas.dart';

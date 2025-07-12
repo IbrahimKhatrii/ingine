@@ -10,7 +10,7 @@
 /// all related extension files to ensure consistent and easy access across the project.
 /// it is the 'part of' engine.dart
 
-part of '../engine.dart';
+part of '../../engine.dart';
 
 extension ObjectExtension on Object {
   Future<String?> paste() async {
