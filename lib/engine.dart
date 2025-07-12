@@ -4,7 +4,8 @@
 // It initializes Flutter bindings, sets up shared preferences, and starts the app.
 // It also exposes core utilities such as preferences and extensions etc.
 
-library;
+// ignore: unnecessary_library_name
+library ingine;
 
 import 'package:flutter/material.dart';
 import 'iEngine/prefs.dart';
