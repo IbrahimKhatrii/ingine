@@ -1,3 +1,9 @@
+import 'dart:convert';
+
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:http/http.dart' as http;
+
 /// This file: `extensions.dart`
 ///
 /// Contains only **core Dart type extensions**, such as:
@@ -10,7 +16,7 @@
 /// all related extension files to ensure consistent and easy access across the project.
 /// it is the 'part of' engine.dart
 
-part of '../../engine.dart';
+// part of '../../engine.dart';
 
 extension ObjectExtension on Object {
   Future<String?> paste() async {

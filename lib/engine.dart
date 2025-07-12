@@ -7,23 +7,18 @@
 library;
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-
-import 'package:http/http.dart' as http; // http (required)
-import 'dart:convert';
-
 import 'iEngine/prefs.dart';
 
 export 'platform.dart';
 
 export 'iEngine/prefs.dart'; // Export Prefs for global access
 
-part 'src/iEngine/extensions.dart';
-
 // Flutter extensions
-part 'src/iEngine/extensions/build_context.dart';
-part 'src/iEngine/extensions/color.dart';
-part 'src/iEngine/extensions/path.dart';
+export 'src/iEngine/extensions/build_context.dart';
+export 'src/iEngine/extensions/color.dart';
+export 'src/iEngine/extensions/path.dart';
+
+export 'src/iEngine/extensions.dart';
 
 // Utils
 part 'iEngine/canvas/canvas.dart';

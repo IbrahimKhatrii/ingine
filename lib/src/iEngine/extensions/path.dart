@@ -1,4 +1,4 @@
-part of '../../../engine.dart';
+import 'dart:ui';
 
 extension PathExtension on Path {
   Path addSmoothCurve(List<Offset> points) {
