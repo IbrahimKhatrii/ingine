@@ -1,6 +1,6 @@
 name: ingine
 description: "Welcome to the IEngine Framework!\nIEngine is a lightweight and beginner-friendly framework designed to simplify Flutter development by reducing boilerplate and offering a clean, intuitive structure."
-version: 0.0.8
+version: 0.0.9
 homepage: https://github.com/IbrahimKhatrii/ingine
 repository: https://github.com/IbrahimKhatrii/ingine
 
