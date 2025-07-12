@@ -18,10 +18,23 @@ import 'package:http/http.dart' as http;
 
 // part of '../../engine.dart';
 
+/// Extension on [Object] to provide common clipboard-related utilities.
+///
+/// Although declared on `Object`, it is primarily intended for use in
+/// UI classes or utility logic where access to clipboard is needed.
 extension ObjectExtension on Object {
-  Future<String?> paste() async {
+  /// Reads and returns plain text from the system clipboard.
+  ///
+  /// Returns an empty string if the clipboard is empty or `null`.
+  ///
+  /// Example:
+  /// ```dart
+  /// final text = await someObject.paste();
+  /// print(text);
+  /// ```
+  Future<String> paste() async {
     final data = await Clipboard.getData(Clipboard.kTextPlain);
-    return data == null ? '' : data.text;
+    return data?.text ?? '';
   }
 }
 
@@ -58,6 +71,10 @@ extension StringExtension on String {
     return json.decode(response.body);
   }
 
+  /// Copies this string to the clipboard.
+  ///
+  /// If a [BuildContext] is provided, it will also show a [SnackBar]
+  /// with the given [message], or "Copied!" by default.
   void copyToClipboard([BuildContext? context, String? message]) {
     Clipboard.setData(ClipboardData(text: this));
     if (context != null) {
@@ -67,12 +84,28 @@ extension StringExtension on String {
     }
   }
 
+  /// Returns `true` if this string is a valid email address format.
+  ///
+  /// Uses a simple regular expression to validate the pattern:
+  /// - local part (alphanumeric, dot, or hyphen)
+  /// - '@' symbol
+  /// - domain part (alphanumeric, dot, or hyphen)
+  /// - ends with a valid top-level domain (2+ characters)
   bool get isEmail {
     final emailRegex = RegExp(r'^[\w\.-]+@[\w\.-]+\.\w{2,}$');
     return emailRegex.hasMatch(this);
   }
 }
 
+/// Extension on [num] to add range checking capabilities.
 extension NumRangeCheck on num {
+  /// Returns `true` if this number is within the inclusive range
+  /// between [min] and [max].
+  ///
+  /// Example:
+  /// ```dart
+  /// 5.inRange(1, 10); // true
+  /// 0.inRange(1, 10); // false
+  /// ```
   bool inRange(num min, num max) => this >= min && this <= max;
 }
