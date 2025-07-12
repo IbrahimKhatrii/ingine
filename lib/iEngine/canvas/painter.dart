@@ -1,5 +1,6 @@
 part of '../../engine.dart';
 
+/// IPainter is abstract class for Painting on ICanvas
 abstract class IPainter {
   double width = 0;
   double height = 0;

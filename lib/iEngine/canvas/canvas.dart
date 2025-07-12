@@ -1,5 +1,6 @@
 part of '../../engine.dart';
 
+/// ICanvas is CustomPainter that paints IPainter (a dynamic effecting canvas)
 class ICanvas extends StatefulWidget {
   final IPainter painter;
 

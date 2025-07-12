@@ -1,8 +1,8 @@
-// iEngine.dart
-//
-// 📦 This file is the main entry point of the iEngine framework.
-// It initializes Flutter bindings, sets up shared preferences, and starts the app.
-// It also exposes core utilities such as preferences and extensions etc.
+/// iEngine.dart
+///
+/// 📦 This file is the main entry point of the iEngine framework.
+/// It initializes Flutter bindings, sets up shared preferences, and starts the app.
+/// It also exposes core utilities such as preferences and extensions etc.
 
 // ignore: unnecessary_library_name
 library ingine;
