@@ -70,7 +70,7 @@ This ensures proper initialization of Flutter bindings and shared preferences be
 #### ✅ Example:
 
 ```dart
-import 'package:ingine/ingine.dart';
+import 'package:ingine/engine.dart';
 
 void main() {
   IEngine.run(MyApp());
@@ -99,7 +99,7 @@ await Prefs.setInt('score', 100);
 await Prefs.setBool('dark_mode', true);
 ```
 
-#### ✅ Set values:
+#### ✅ utils:
 
 ```dart
 Prefs.contains('username'); // Check if key exists
@@ -112,18 +112,17 @@ await Prefs.clear(); // Clear all preferences
 
 The `extensions.dart` file provides handy extensions for commonly used Dart types like `String`, `num`, and `Object`, making your code cleaner and more expressive.
 
-#### 🧪 Object Extension
+#### Object Extension
 
 - **Paste Text**
 
 ```dart
-final text = await Object().paste();
+final text = await Object().paste(); // or
+final pastedString = await any.paste();
 print('Pasted: $text');
-
-
 ```
 
-#### 🧪 String Extension
+#### String Extension
 
 - **Fetch JSON from URL**
 
@@ -137,7 +136,7 @@ print(data['key']);
 ```dart
 'Copied text'.copyToClipboard(); // Basic usage
 'Copied text'.copyToClipboard(context); // With toast message ('Copied!')
-'Copied text'.copyToClipboard(context, 'Copied to clipboard!'); // With toast message
+'Copied text'.copyToClipboard(context, 'Copied to clipboard!'); // With custom toast message
 
 ```
 
@@ -171,19 +170,6 @@ if (value.inRange(10, 20)) {
 context.isMobile;   // true if width < 600
 context.isTablet;   // true if width between 600 and 800
 context.isDesktop;  // true if width > 1024
-context.isWeb;      // true if running on web
-context.isAndroid;  // true if Android and not web
-context.isIOS;      // true if iOS and not web
-context.isWindows;  // true if Windows and not web
-context.isLinux;    // true if Linux and not web
-context.isMacOS;    // true if macOS and not web
-
-if (context.isLandscape) {
-  print('Landscape mode');
-} else if (context.isPortrait) {
-  print('Portrait mode');
-}
-
 ```
 
 #### 📏 Platform Checks
