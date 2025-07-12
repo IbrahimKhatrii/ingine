@@ -1,3 +1,7 @@
+/// Provides shared preferences utilities via the [Prefs] class.
+// ignore: unnecessary_library_name
+library prefs;
+
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// A singleton-style utility class for accessing `SharedPreferences` in a simplified way.

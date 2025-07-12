@@ -5,6 +5,11 @@ part of '../../engine.dart';
 /// [IPainter] handles painting, animation controllers, and repaint management.
 /// Extend this class to create animated or interactive canvas effects.
 abstract class IPainter {
+  /// Creates an instance of [IPainter].
+  ///
+  /// This is an abstract class used to define custom canvas painters for ICanvas.
+  IPainter();
+
   /// The current width of the canvas.
   double width = 0;
 

@@ -39,6 +39,10 @@ part 'iEngine/canvas/painter.dart';
 /// }
 /// ```
 class IEngine {
+  /// Creates an instance of [IEngine].
+  ///
+  /// This class is only used to initialize and run the app using [IEngine.run].
+  IEngine._(); // Prevents instantiation
   /// Initializes the iEngine environment and launches the given [application].
   ///
   /// This should be called at the very start of `main()`.
