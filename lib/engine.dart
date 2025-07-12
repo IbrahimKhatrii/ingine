@@ -14,6 +14,8 @@ import 'dart:convert';
 
 import 'iEngine/prefs.dart';
 
+export 'platform.dart';
+
 export 'iEngine/prefs.dart'; // Export Prefs for global access
 
 part 'iEngine/extensions.dart';
