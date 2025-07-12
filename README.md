@@ -301,11 +301,3 @@ If you have any questions or need help using the package, reach out via the Issu
 ---
 
 Thanks for using **iEngine** – A lightweight and developer-friendly way to power your Flutter apps!
-
-```
-
-```
-
-```
-
-```
