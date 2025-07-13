@@ -20,6 +20,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 /// await Prefs.setBool('isLoggedIn', true);
 /// ```
 class Prefs {
+  /// Creates a new instance of [Prefs].
+  Prefs();
   static late final SharedPreferences _instance;
 
   // ----------------------
